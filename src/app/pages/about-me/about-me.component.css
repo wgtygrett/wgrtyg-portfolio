@@ -1,0 +1,35 @@
+@keyframes fadeInAndGrow {
+    0% {
+      transform: scale(0.25); /* Start smaller */
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1); /* End at 200% size */
+      opacity: 1; /* Full opacity */
+    }
+  }
+  
+  .fade-in-grow {
+    display: inline-block;
+    animation: fadeInAndGrow 3s ease-out forwards;
+  }
+  
+ /* Initial state of the text (off to the right) */
+.slide-in {
+    transform: translateX(100%); /* Start off-screen to the right */
+    opacity: 0; /* Initially invisible */
+    transition: transform 2s ease-out, opacity 2s ease-out; /* Smooth transition for position and opacity */
+  }
+  
+  /* Final state of the text (fully visible in place) */
+  .slide-in.loaded {
+    transform: translateX(0); /* Move text to its natural position */
+    opacity: 1; /* Fully visible */
+  }
+  
+  
+  
+
+
+
+

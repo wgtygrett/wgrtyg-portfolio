@@ -1,0 +1,131 @@
+.pipeline-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+  }
+  
+  .pipeline-stage {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .stage-dot {
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 50%;
+    position: absolute;
+    left: -30px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .stage-dot.active {
+    background-color: #4caf50; /* Active color (could be tech-blue or any color you prefer) */
+  }
+  
+  .stage-details {
+    margin-left: 40px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    transition: background-color 0.3s ease;
+  }
+  
+  .stage-details:hover {
+    background-color: #e0f7fa; /* Highlight on hover */
+  }
+  
+  .stage-line {
+    width: 2px;
+    height: 100px;
+    background-color: #ccc;
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .stage-line.active {
+    background-color: #4caf50; /* Active color */
+  }
+  
+  .pipeline-stage:last-child .stage-line {
+    display: none; /* Hide line after the last stage */
+  }
+  
+  .timeline {
+    position: relative;
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 2px solid #007bff; /* Pipeline-like line */
+  }
+  
+  .timeline-item {
+    display: flex;
+    margin-bottom: 30px;
+    position: relative;
+    opacity: 0;
+  }
+  
+  .timeline-stage {
+    position: absolute;
+    left: -18px; /* Adjust to position stage circle on the line */
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .circle {
+    width: 12px;
+    height: 12px;
+    background-color: #007bff; /* Stage circle color */
+    border-radius: 50%;
+    border: 2px solid white;
+  }
+  
+  .line {
+    width: 2px;
+    height: 100%;
+    background-color: #007bff; /* Stage connection line */
+    margin-top: 10px; /* Adjust line between circle and content */
+  }
+  
+  .timeline-content {
+    margin-left: 20px;
+  }
+  
+  .timeline-content h3 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .timeline-content p {
+    font-size: 12px;
+    color: #555;
+  }
+  
+  /* Animation for the timeline items */
+  .timeline-item {
+    transform: translateY(20px);
+  }
+  
+  .timeline-item.ng-trigger-fadeInUp.ng-animating {
+    animation: fadeInUp 0.5s ease-out forwards;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

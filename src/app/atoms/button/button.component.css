@@ -1,0 +1,381 @@
+.btn {
+    position: relative;
+    text-align: center;
+    padding: 12px 16px;
+    font-size: 1rem;
+    border: 1px solid transparent;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    font-weight: 500;
+    width: 100%; /* Make the button take full width of its container */
+  }
+  
+  .btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #93c5fd, 0 0 0 4px rgba(255, 255, 255, 1);
+  }
+  
+  /* Primary Variant */
+  .btn-primary {
+      color: white;
+      background-color: #3b82f6;
+  }
+    
+  .btn-primary:hover {
+      background-color: #1e40af;
+      color: white;
+  }
+    
+  .btn-primary-transparent {
+      color: #3b82f6;
+      background: none;
+      border: 1px solid #3b82f6;
+  }
+    
+  .btn-primary-transparent:hover {
+      background-color: #1e40af;
+      border-color: #1e40af;
+      color: white;
+  }
+  
+  /* Secondary Variant */
+  .btn-secondary {
+      color: #3b82f6;
+      background-color: #f3f4f6;
+  }
+    
+  .btn-secondary:hover {
+      background-color: #dbeafe;
+      color: white;
+  }
+    
+  .btn-secondary-transparent {
+      color: #3b82f6;
+      background: none;
+      border: 1px solid #3b82f6;
+  }
+    
+  .btn-secondary-transparent:hover {
+      background-color: #dbeafe;
+      border-color: #1e40af;
+      color: white;
+  }
+  
+  /* Warning Variant */
+  .btn-warning {
+      color: white;
+      background-color: #f87171;
+  }
+    
+  .btn-warning:hover {
+      background-color: #dc2626;
+      color: white;
+  }
+    
+  .btn-warning-transparent {
+      color: #f87171;
+      background: none;
+      border: 1px solid #f87171;
+  }
+    
+  .btn-warning-transparent:hover {
+      background-color: #dc2626;
+      border-color: #dc2626;
+      color: white;
+  }
+  
+  /* Tertiary/Open Variant */
+  .btn-open {
+      color: #3b82f6;
+      background: none;
+      box-shadow: none;
+  }
+    
+  .btn-open:hover {
+      color: white;
+      background-color: #1e40af;
+  }
+    
+  .btn-open:hover::after {
+      content: '';
+      position: absolute;
+      background-color: #1e40af;
+      bottom: 8px;
+      height: 1px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: calc(100% - 2rem);
+  }
+  
+  .btn-open-transparent {
+      color: #3b82f6;
+      background: none;
+      border: 1px solid #3b82f6;
+      box-shadow: none;
+  }
+    
+  .btn-open-transparent:hover {
+      color: white;
+      background-color: #1e40af;
+      border-color: #1e40af;
+  }
+  
+  /* Navy Variant */
+  .btn-navy {
+      color: white;
+      background-color: #0300aa;
+  }
+    
+  .btn-navy:hover {
+      background-color: #020086;
+      color: white;
+  }
+    
+  .btn-navy-transparent {
+      color: #0300aa;
+      background: none;
+      border: 1px solid #0300aa;
+  }
+    
+  .btn-navy-transparent:hover {
+      background-color: #020086;
+      border-color: #020086;
+      color: white;
+  }
+  
+  /* Eggplant Variant */
+  .btn-eggplant {
+      color: white;
+      background-color: #740081;
+  }
+    
+  .btn-eggplant:hover {
+      background-color: #54005d;
+      color: white;
+  }
+    
+  .btn-eggplant-transparent {
+      color: #740081;
+      background: none;
+      border: 1px solid #740081;
+  }
+    
+  .btn-eggplant-transparent:hover {
+      background-color: #54005d;
+      border-color: #54005d;
+      color: white;
+  }
+  
+  /* Blue-Violet Variant */
+  .btn-blue-violet {
+      color: white;
+      background-color: #44005B;
+  }
+    
+  .btn-blue-violet:hover {
+      background-color: #360048;
+      color: white;
+  }
+    
+  .btn-blue-violet-transparent {
+      color: #44005B;
+      background: none;
+      border: 1px solid #44005B;
+  }
+    
+  .btn-blue-violet-transparent:hover {
+      background-color: #360048;
+      border-color: #360048;
+      color: white;
+  }
+  
+  /* Wine Variant */
+  .btn-wine {
+      color: white;
+      background-color: #5A0016;
+  }
+    
+  .btn-wine:hover {
+      background-color: rgb(79, 0, 26);
+      color: white;
+  }
+    
+  .btn-wine-transparent {
+      color: #5A0016;
+      background: none;
+      border: 1px solid #5A0016;
+  }
+    
+  .btn-wine-transparent:hover {
+      background-color: rgb(79, 0, 26);
+      border-color: rgb(79, 0, 26);
+      color: white;
+  }
+  
+  /* Emerald Variant */
+  .btn-emerald {
+      color: white;
+      background-color: #006757;
+  }
+    
+  .btn-emerald:hover {
+      background-color: #005548;
+      color: white;
+  }
+    
+  .btn-emerald-transparent {
+      color: #006757;
+      background: none;
+      border: 1px solid #006757;
+  }
+    
+  .btn-emerald-transparent:hover {
+      background-color: #005548;
+      border-color: #005548;
+      color: white;
+  }
+  
+  /* Tech Blue Variants */
+  .btn-tech-blue-dark {
+      color: white;
+      background-color: #2a6f96;
+  }
+    
+  .btn-tech-blue-dark:hover {
+      background-color: #1e3a57;
+      color: white;
+  }
+    
+  .btn-tech-blue-dark-transparent {
+      color: #2a6f96;
+      background: none;
+      border: 1px solid #2a6f96;
+  }
+    
+  .btn-tech-blue-dark-transparent:hover {
+      background-color: #1e3a57;
+      border-color: #1e3a57;
+      color: white;
+  }
+  
+  .btn-tech-blue-light {
+      color: #2a6f96;
+      background-color: #e1f0f7;
+  }
+    
+  .btn-tech-blue-light:hover {
+      background-color: #c5d9e6;
+      color: white;
+  }
+    
+  .btn-tech-blue-light-transparent {
+      color: #2a6f96;
+      background: none;
+      border: 1px solid #2a6f96;
+  }
+    
+  .btn-tech-blue-light-transparent:hover {
+      background-color: #c5d9e6;
+      border-color: #1e3a57;
+      color: white;
+  }
+  
+  /* Tech Blue Gray Variant */
+  .btn-tech-blue-gray {
+      color: white;
+      background-color: #15384b;
+  }
+    
+  .btn-tech-blue-gray:hover {
+      background-color: #0d2c38;
+      color: white;
+  }
+    
+  .btn-tech-blue-gray-transparent {
+      color: #15384b;
+      background: none;
+      border: 1px solid #15384b;
+  }
+    
+  .btn-tech-blue-gray-transparent:hover {
+      background-color: #0d2c38;
+      border-color: #0d2c38;
+      color: white;
+  }
+  
+  /* New Tech-Blue Colors */
+  .btn-tech-blue-mid {
+      color: white;
+      background-color: #006796;
+  }
+    
+  .btn-tech-blue-mid:hover {
+      background-color: #005c7e;
+      color: white;
+  }
+    
+  .btn-tech-blue-mid-transparent {
+      color: #006796;
+      background: none;
+      border: 1px solid #006796;
+  }
+    
+  .btn-tech-blue-mid-transparent:hover {
+      background-color: #005c7e;
+      border-color: #005c7e;
+      color: white;
+  }
+  
+  .btn-tech-blue-bright {
+      color: white;
+      background-color: #00a3ff;
+  }
+    
+  .btn-tech-blue-bright:hover {
+      background-color: #008ecc;
+      color: white;
+  }
+    
+  .btn-tech-blue-bright-transparent {
+      color: #00a3ff;
+      background: none;
+      border: 1px solid #00a3ff;
+  }
+    
+  .btn-tech-blue-bright-transparent:hover {
+      background-color: #008ecc;
+      border-color: #008ecc;
+      color: white;
+  }
+  
+  .btn-tech-blue {
+      color: white;
+      background-color: #007dc4;
+  }
+    
+  .btn-tech-blue:hover {
+      background-color: #005b92;
+      color: white;
+  }
+    
+  .btn-tech-blue-transparent {
+      color: #007dc4;
+      background: none;
+      border: 1px solid #007dc4;
+  }
+    
+  .btn-tech-blue-transparent:hover {
+      background-color: #005b92;
+      border-color: #005b92;
+      color: white;
+  }
+  
+  /* Disabled State */
+  .btn:disabled {
+      color: #9ca3af;
+      background-color: #f9fafb;
+      box-shadow: none;
+      cursor: not-allowed;
+  }
+  

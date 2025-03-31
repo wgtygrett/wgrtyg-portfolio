@@ -1,0 +1,55 @@
+<div class="relative border-l-4 border-tech-blue-dark pl-6">
+    <div *ngFor="let edu of educationTimeline" 
+         class="mb-6 mt-2 relative group transition-all duration-300 ease-in-out 
+         hover:scale-105 hover:shadow-lg hover:bg-tech-blue-light
+         hover:ml-2 rounded-lg p-4">
+  
+      <!-- Timeline Dot positioned at 50% height of the card, and grows on hover -->
+      <div class="absolute -left-8 top-1/2 transform -translate-y-1/2 w-3 h-3 bg-tech-blue-dark rounded-full transition-all duration-300 
+      group-hover:scale-105 group-hover:-left-2 group-hover:bg-tech-blue-bright"></div>
+  
+      <!-- Card Content -->
+      <div class="transition-all duration-300 group-hover:scale-105 group-hover:pl-4">
+        
+        <!-- Entire Card as Link -->
+        <a *ngIf="edu.school === 'McNeese State University'" href="https://mcneese.edu/" target="_blank" class="block">
+          <h3 class="font-monsterrat font-black text-tech-blue-mid transition-colors duration-300 group-hover:text-tech-blue-gray">
+            {{ edu.school }}
+          </h3>
+          <p class="text-xs font-syncopate font-normal text-gray-600 transition-colors duration-300 group-hover:text-tech-blue-gray">
+            {{ edu.date }}
+          </p>
+          <p class="text-xs font-syncopate font-normal transition-colors duration-300 group-hover:text-tech-blue-gray">
+            {{ edu.degree }}
+          </p>
+        </a>
+        
+        <a *ngIf="edu.school === 'Academy of Acadiana'" href="https://academyofacadiana.wordpress.com/" target="_blank" class="block">
+          <h3 class="font-monsterrat font-black text-tech-blue-mid transition-colors duration-300 group-hover:text-tech-blue-gray">
+            {{ edu.school }}
+          </h3>
+          <p class="text-xs font-syncopate font-normal text-gray-600 transition-colors duration-300 group-hover:text-tech-blue-gray">
+            {{ edu.date }}
+          </p>
+          <p class="text-xs font-syncopate font-normal transition-colors duration-300 group-hover:text-tech-blue-gray">
+            {{ edu.degree }}
+          </p>
+        </a>
+        
+        <div *ngIf="edu.school === 'Delta School of Arts and Technology'">
+          <h3 class="font-monsterrat font-black text-tech-blue-mid transition-colors duration-300 group-hover:text-tech-blue-gray">
+            {{ edu.school }} 
+            <span class="text-xs font-syncopate font-normal text-gray-600">(Closed)</span>
+          </h3>
+          <p class="text-xs font-syncopate font-normal text-gray-600 transition-colors duration-300 group-hover:text-tech-blue-gray">
+            {{ edu.date }}
+          </p>
+          <p class="text-xs font-syncopate font-normal transition-colors duration-300 group-hover:text-tech-blue-gray">
+            {{ edu.degree }}
+          </p>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  

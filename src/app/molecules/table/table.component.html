@@ -1,0 +1,26 @@
+<div class="shadow overflow-auto border-b border-gray-5 sm:rounded-lg">
+    <table class="min-w-full divide-y divide-gray-40">
+      <thead class="bg-blue-200">
+        <tr class="divide-x divide-blue-200">
+          <th
+            *ngFor="let header of values[0] | keyvalue"
+            scope="col"
+            class="p-4 text-left text-sm font-medium bg-gray-5 text-black uppercase tracking-wider whitespace-nowrap"
+            [ngClass]="{ 'sticky top-0': stickyHeadings }"
+          >
+            {{ header.key }}
+          </th>
+        </tr>
+      </thead>
+      <tbody class="bg-white divide-y divide-gray-15">
+        <tr *ngFor="let record of values; odd as odd" class="divide-x divide-gray-15" [ngClass]="{ 'bg-gray-1': odd }">
+          <td *ngFor="let cell of record | keyvalue" class="px-6 py-4 whitespace-nowrap">
+            <div class="flex items-center">
+              <div class="text-sm font-medium text-black">{{ cell.value }}</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+  

@@ -1,0 +1,17 @@
+@keyframes blink {
+    50% {
+      opacity: 0;  /* Make the underscore disappear at 50% of the time */
+    }
+  }
+  
+  .blink {
+    animation: blink 1s step-end infinite;  /* Apply the blinking animation */
+  }
+  
+/* Custom CSS */
+.large-cog {
+    font-size: 4rem;  /* or adjust this to any size you need */
+    width: 200px;     /* Adjust width as needed */
+    height: 200px;    /* Adjust height as needed */
+  }
+  

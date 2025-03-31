@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "~@fortawesome/fontawesome-free/css/all.css";
+/* @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Major+Mono+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Syncopate:wght@400;700&display=swap'); */
+
+@font-face {
+    font-family: 'Major Mono Display';
+    src: url('./app/assets/fonts/Major_Mono_Display/MajorMonoDisplay-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .monodisplay-regular {
+    font-family: 'Major Mono Display';
+    src: url('./app/assets/fonts/Major_Mono_Display/MajorMonoDisplay-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .syncopate-regular {
+    font-family: "Syncopate", sans-serif;
+    src: url('./app/assets/fonts/Syncopate/Syncopate-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .syncopate-bold {
+    font-family: "Syncopate", sans-serif;
+    src: url('./app/assets/fonts/Syncopate/Syncopate-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+  
