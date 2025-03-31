@@ -28,8 +28,7 @@
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js",
-              "core-js/es/reflect",
-              "polyfills-FFHMD2TL.js"
+              "core-js/es/reflect"
               
             ],
             "tsConfig": "tsconfig.app.json",
