@@ -29,7 +29,7 @@
             "polyfills": [
               "zone.js",
               "core-js/es/reflect",
-              "src/polyfills-FFHMD2TL.ts"
+              "polyfills-FFHMD2TL.js"
               
             ],
             "tsConfig": "tsconfig.app.json",
