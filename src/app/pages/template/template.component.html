@@ -1,0 +1,248 @@
+<div class="wrapper min-h-screen flex flex-col">
+    <main class="main">
+      <div class="m-4">
+        <h1 class="font-heading text-4xl text-center"></h1>
+        <div class="m-4"></div>
+        <div class="flex justify-center">
+          <div class="m-4 w-2/3">
+            <h2 class="example-text">Hey! Here's a neat little template I made for myself to practice Tailwind.</h2>
+            <app-hint-text class="">
+              Did you find me via my 
+              <a class="underline" href="https://www.linkedin.com/in/wtygrett" target="_blank">LinkedIn</a> 
+              or my <a class="underline" href="https://github.com/wgtygrett/frontend-template" target="_blank">GitHub</a> repo?
+            </app-hint-text>
+            <h2 class="example-text pt-4">Check out these included pre-made components:</h2>
+            <div class="my-4 p-4 shadow-4 rounded-lg">
+              <h3 class="mb-2 font-heading underline text-lg">Example form input</h3>
+              <p class="underline mb-2">Code:</p>
+              <div class="mb-4 bg-gray-5 p-2 text-sm">
+                <code
+                  >&lt;app-text-input<br />
+                  &nbsp;&nbsp;inputId="firstName"<br />
+                  &nbsp;&nbsp;formControlName="firstName"<br />
+                  &nbsp;&nbsp;label="First name"<br />
+                  &nbsp;&nbsp;hintText="This is some hint text letting you know to put in your first name."<br />
+                  &gt;&lt;/app-text-input&gt;</code
+                >
+              </div>
+              <p class="underline mb-2">Output:</p>
+              <div class="w-1/2">
+                <app-text-input
+                  inputId="firstName"
+                  label="First name"
+                  hintText="This is some hint text letting you know to put in your first name."
+                ></app-text-input>
+              </div>
+            </div>
+            <div class="my-4 p-4 shadow-4 rounded-lg">
+              <h3 class="mb-2 font-heading underline text-lg">Example checkboxes</h3>
+              <p class="underline mb-2">Code:</p>
+              <div class="mb-4 bg-gray-5 p-2 text-sm">
+                <code>
+                  &lt;app-checkbox<br />
+                  &nbsp;&nbsp;inputId="checkbox1"<br />
+                  &nbsp;&nbsp;formControlName="checkbox1"<br />
+                  &nbsp;&nbsp;label="Checkbox 1"<br />
+                  &gt;&lt;/app-checkbox&gt;<br />
+                  &lt;app-checkbox<br />
+                  &nbsp;&nbsp;inputId="checkbox2"<br />
+                  &nbsp;&nbsp;formControlName="checkbox2"<br />
+                  &nbsp;&nbsp;label="Checkbox 2"<br />
+                  &gt;&lt;/app-checkbox&gt;<br />
+                  &lt;app-checkbox<br />
+                  &nbsp;&nbsp;inputId="checkbox3"<br />
+                  &nbsp;&nbsp;formControlName="checkbox3"<br />
+                  &nbsp;&nbsp;label="Checkbox 3"<br />
+                  &gt;&lt;/app-checkbox&gt;
+                </code>
+              </div>
+              <p class="underline mb-2">Output:</p>
+              <app-checkbox inputId="checkbox1" label="Checkbox 1"></app-checkbox>
+              <app-checkbox inputId="checkbox2" label="Checkbox 2"></app-checkbox>
+              <app-checkbox inputId="checkbox3" label="Checkbox 3"></app-checkbox>
+            </div>
+            <div class="my-4 p-4 shadow-4 rounded-lg">
+              <h3 class="mb-2 font-heading underline text-lg">Example radio buttons</h3>
+              <p class="mb-2">
+                This component uses the <code class="text-sm bg-gray-5">formControlName</code> attribute to automatically
+                group related radio buttons.
+              </p>
+              <p class="underline mb-2">Code:</p>
+              <div class="mb-4 bg-gray-5 p-2 text-sm">
+                <code>
+                  &lt;app-radio-button<br />
+                  &nbsp;&nbsp;formControlName="exampleRadioList"<br />
+                  &nbsp;&nbsp;inputId="radio1"<br />
+                  &nbsp;&nbsp;value="example-value-1"<br />
+                  &nbsp;&nbsp;label="Radio Button 1"<br />
+                  &gt;&lt;app-radio-button&gt;<br />
+                  &lt;app-radio-button<br />
+                  &nbsp;&nbsp;formControlName="exampleRadioList"<br />
+                  &nbsp;&nbsp;inputId="radio2"<br />
+                  &nbsp;&nbsp;value="example-value-2"<br />
+                  &nbsp;&nbsp;label="Radio Button 2"<br />
+                  &gt;&lt;app-radio-button&gt;<br />
+                  &lt;app-radio-button<br />
+                  &nbsp;&nbsp;formControlName="exampleRadioList"<br />
+                  &nbsp;&nbsp;inputId="radio3"<br />
+                  &nbsp;&nbsp;value="example-value-3"<br />
+                  &nbsp;&nbsp;label="Radio Button 3"<br />
+                  &gt;&lt;app-radio-button&gt;
+                </code>
+              </div>
+              <p class="underline mb-2">Output:</p>
+              <form [formGroup]="exampleForm">
+                <app-radio-button
+                  formControlName="exampleRadioList"
+                  inputId="radio1"
+                  value="example-value-1"
+                  label="Radio Button 1"
+                ></app-radio-button>
+                <app-radio-button
+                  formControlName="exampleRadioList"
+                  inputId="radio2"
+                  value="example-value-2"
+                  label="Radio Button 2"
+                ></app-radio-button>
+                <app-radio-button
+                  formControlName="exampleRadioList"
+                  inputId="radio3"
+                  value="example-value-3"
+                  label="Radio Button 3"
+                ></app-radio-button>
+              </form>
+            </div>
+            <div class="my-4 p-4 shadow-4 rounded-lg">
+              <h3 class="mb-2 font-heading underline text-lg">Example select menu</h3>
+              <p class="mb-2">Given an array of strings as options, the Select component renders as below.</p>
+              <p class="underline mb-2">Code:</p>
+              <div class="mb-4 bg-gray-5 p-2 text-sm">
+                <code
+                  >&lt;app-select<br />
+                  &nbsp;&nbsp;inputId="example-select"<br />
+                  &nbsp;&nbsp;label="Example Select"<br />
+                  &nbsp;&nbsp;formControlName="exampleSelect"<br />
+                  &nbsp;&nbsp;[options]="someArrayOfStrings"<br />
+                  &nbsp;&nbsp;selected="Option 2"<br />
+                  &gt;&lt;/app-select&gt;</code
+                >
+              </div>
+              <p class="underline mb-2">Output:</p>
+              <div class="w-1/2">
+                <app-select
+                  inputId="example-select"
+                  label="Example Select"
+                  [options]="selectOptions"
+                  selected="Option 2"
+                ></app-select>
+              </div>
+            </div>
+            <div class="my-4 p-4 shadow-4 rounded-lg">
+              <h3 class="mb-2 font-heading underline text-lg">Example buttons</h3>
+              <p class="underline mb-2">Code:</p>
+              <div class="mb-4 bg-gray-5 p-2 text-sm">
+                <code
+                  >&lt;app-button&gt;Primary&lt;/app-button&gt;<br />
+                  &lt;app-button variant="secondary"&gt;Secondary&lt;/app-button&gt;<br />
+                  &lt;app-button variant="warning"&gt;Destructive&lt;/app-button&gt;<br />
+                  &lt;app-button variant="open"&gt;Tertiary&lt;/app-button&gt;<br />
+                  &lt;app-button [disabled]="true"&gt;Disabled&lt;/app-button&gt;
+                </code>
+              </div>
+              <p class="underline mb-2">Output:</p>
+              <div class="flex justify-around w-full">
+                <app-button>Primary</app-button>
+                <app-button variant="secondary">Secondary</app-button>
+                <app-button variant="warning">Destructive</app-button>
+                <app-button variant="open">Tertiary</app-button>
+                <app-button [disabled]="true">Disabled</app-button>
+              </div>
+            </div>
+            <div class="my-4 p-4 shadow-4 rounded-lg">
+              <h3 class="mb-2 font-heading underline text-lg">Example table</h3>
+              <p class="mb-2">
+                Given an array of objects, the table uses the object keys as headers, then displays a row of values for
+                each object.
+              </p>
+              <p class="mb-2">
+                You can optionally make the column headings stay at the top of the table while scrolling by passing a
+                value of <code class="text-sm bg-gray-5">[stickyHeadings]="true"</code>.
+              </p>
+              <p class="underline mb-2">Code:</p>
+              <div class="mb-4 bg-gray-5 p-2 text-sm">
+                <code>&lt;app-table [values]="someArrayOfObjects" [stickyHeadings]="true"&gt;&lt;/app-table&gt;</code>
+              </div>
+              <p class="underline mb-2">Output:</p>
+              <app-table [values]="dummyValues" [stickyHeadings]="true"></app-table>
+            </div>
+            <div class="my-4 p-4 shadow-4 rounded-lg">
+              <h3 class="mb-2 font-heading underline text-lg">Example dialog/modal</h3>
+              <app-hint-text class="">Hint: Right now, for this dialog - 'Nevermind' and 'Do The Thing' do the same thing...
+                <br>Sorry!
+                <br>You'll need to give the buttons their own action on your own.
+                <br>I couldn't think of anything. Maybe when I make more pages.</app-hint-text>
+              <p class="my-2">
+                Place the dialog component in your templating and make use of the
+                <code class="text-sm bg-gray-5">DialogService</code> to handle opening and closing the dialog.
+              </p>
+              <p class="mb-2">
+                Each dialog must be given a <em>unique</em>&nbsp;<code class="text-sm bg-gray-5">id</code> property.
+              </p>
+              <p class="underline mb-2">Code:</p>
+              <div class="mb-4 bg-gray-5 p-2 text-sm">
+                <code>
+                  &lt;!-- component.ts file --&gt;<br />
+                  dialogID: string = 'test-example'<br /><br />
+                  constructor(private dialogService: DialogService) {{ '{' }} {{ '}' }}<br /><br />
+                  openDialog() {{ '{' }}<br />
+                  &nbsp;&nbsp;this.dialogService.open(this.dialogID)<br />
+                  {{ '}' }}<br /><br />
+                  &lt;!-- component.html file --&gt;<br />
+                  &lt;app-button (click)="openDialog()"&gt;Open Dialog&lt;/app-button&gt;<br />
+                  &lt;app-dialog [id]="dialogID"&gt;<br />
+                  &nbsp;&nbsp;&lt;div class="p-4 bg-blue-10"&gt;<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;h3 class="font-heading text-2xl leading-6 font-medium text-black"&gt;<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;fa-icon class="text-blue mr-4"
+                  [icon]="infoIcon"&gt;&lt;/fa-icon&gt;Dialog Title<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;/h3&gt;<br />
+                  &nbsp;&nbsp;&lt;/div&gt;<br />
+                  &nbsp;&nbsp;&lt;div class="p-4"&gt;<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="my-2"&gt;Here is an example of a dialog.&lt;/p&gt;<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="my-2"&gt;Use this area to inform the user of the consequences of
+                  their actions.&lt;/p&gt;<br />
+                  &nbsp;&nbsp;&lt;/div&gt;<br />
+                  &nbsp;&nbsp;&lt;div class="px-4 py-3 sm:px-6 sm:flex sm:justify-end bg-gray-1"&gt;<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;app-button variant="secondary" class="ml-4"
+                  (click)="closeDialog()"&gt;Nevermind&lt;/app-button&gt;<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;app-button variant="primary" class="ml-4" (click)="closeDialog()"&gt;Do The
+                  Thing&lt;/app-button&gt;<br />
+                  &nbsp;&nbsp;&lt;/div&gt;<br />
+                  &lt;/app-dialog&gt;</code
+                >
+              </div>
+              <p class="underline mb-2">Output:</p>
+              <app-button (click)="openDialog()">Open Dialog</app-button>
+              <app-dialog [id]="dialogID">
+                <div class="p-4 bg-blue-10">
+                  <h3 class="font-heading text-2xl leading-6 font-medium text-black">
+                    <fa-icon class="text-blue mr-4" [icon]="infoIcon"></fa-icon>Dialog Title
+                  </h3>
+                </div>
+                <div class="p-4">
+                  <p class="my-2">Here is an example of a dialog.</p>
+                  <p class="my-2">Use this area to inform the user of the consequences of their actions.</p>
+                </div>
+                <div class="px-4 py-3 sm:px-6 sm:flex sm:justify-end bg-gray-1">
+                  <app-button variant="secondary" class="ml-4" (click)="closeDialog()">Nevermind</app-button>
+                  <app-button variant="primary" class="ml-4" (click)="closeDialog()">Do The Thing</app-button>
+                </div>
+              </app-dialog>
+            </div>
+          </div>
+        </div>
+      </div>
+        <!-- <router-outlet></router-outlet> -->
+        <!-- This used to be the old home page. Surprise! -->
+    </main>
+</div>
+  

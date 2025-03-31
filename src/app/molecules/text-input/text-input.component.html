@@ -1,0 +1,12 @@
+<!-- <p>text-input works!</p> -->
+<app-label [for]="inputId">{{ label }}</app-label>
+<input
+  [id]="inputId"
+  type="text"
+  [value]="value"
+  [(ngModel)]="value"
+  (ngModelChange)="onChange($event)"
+  (blur)="onTouch($event)"
+  class="mt-1 block w-full shadow-sm sm:text-sm border border-blue-400 rounded-md"
+/>
+<app-hint-text *ngIf="hintText">{{ hintText }}</app-hint-text>

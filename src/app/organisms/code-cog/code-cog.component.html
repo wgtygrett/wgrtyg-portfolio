@@ -1,0 +1,24 @@
+<div 
+class=" mb-7 h-3/4 
+        relative pl-4 pr-16 pt-3 rounded-lg pb-12
+        bg-tech-blue-bright bg-opacity-50 
+        self-start
+        sm:w-full
+        xs:w-full">
+    <!-- >_ Text with Blinking Cursor -->
+    <span class="text-white text-lg font-mono">
+      >
+      <span>{{ typedText }}</span><span class="blink cursor">_</span>
+    </span>
+
+    <!-- Rotating Cog Wheel -->
+    <i class="fas fa-cog text-tech-blue-mid text-6xl opacity-50 absolute bottom-0.5 left-6 transform -mb-8 -ml-12 animate-rotate"></i>
+</div>
+
+
+  <!-- Ensure that the button is correctly triggering the onButtonClick() method -->
+  <!-- <app-button (buttonClicked)="onButtonClick('Experience')">Experience</app-button>
+  <app-button (buttonClicked)="onButtonClick('Resume')">Resume</app-button>
+  <app-button (buttonClicked)="onButtonClick('Skills')">Skills</app-button>
+  <app-button (buttonClicked)="onButtonClick('Education')">Education</app-button>
+   -->

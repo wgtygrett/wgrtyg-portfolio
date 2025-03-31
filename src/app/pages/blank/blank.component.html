@@ -1,0 +1,409 @@
+<!-- <div class="w-full">
+    <p class="text-tech-blue-light">SQL (Expert)</p>
+    <div class="bg-gray-300 h-2 rounded-md overflow-hidden">
+      <div class="bg-tech-blue-bright h-full w-11/12 animate-pulse"></div>
+    </div>
+  </div> -->
+  
+  <!-- <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+    <div class="relative group bg-tech-blue-dark p-4 rounded-lg shadow-lg">
+      <h3 class="text-white font-semibold">Frontend Development</h3>
+      <p class="text-tech-blue-light">Angular, React, Tailwind, TypeScript</p>
+      <div class="absolute inset-0 bg-tech-blue-mid text-white opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+        <p class="text-sm">6+ years experience building scalable UI.</p>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- <div class="flex flex-wrap gap-2">
+    <span class="bg-tech-blue-light text-white px-3 py-1 rounded-full text-sm cursor-pointer hover:bg-tech-blue-bright">
+      Angular
+    </span>
+    <span class="bg-tech-blue-light text-white px-3 py-1 rounded-full text-sm cursor-pointer hover:bg-tech-blue-bright">
+      SQL
+    </span>
+  </div> -->
+  
+  <!-- <div class="relative border-l-4 border-tech-blue-mid pl-6">
+    <div class="mb-6">
+      <h3 class="text-tech-blue-bright font-bold">McNeese State University</h3>
+      <p class="text-sm text-gray-400">B.S. in Computer Science, 2019</p>
+    </div>
+  </div>
+   -->
+  <!-- <app-image-slider></app-image-slider> -->
+  <!-- <p class="font-monodisplay text-xl">Major Mono Display</p>
+  <p class="font-inter font-light">Inter Light</p>
+<p class="font-inter font-medium">Inter Medium</p>
+<p class="font-inter font-bold">Inter Bold</p>
+<p class="font-syncopate font-normal">Syncopate Regular</p>
+<p class="font-syncopate font-bold">Syncopate Bold</p>
+<p class="font-montserrat font-thin">Montserrat Thin</p>
+<p class="font-montserrat font-semibold">Montserrat Semibold</p>
+<p class="font-montserrat font-black">Montserrat Black</p> -->
+<!-- <app-contact-form></app-contact-form> -->
+   <div #error *ngIf="isScreenTooSmall" class="full-screen-error">
+    <p class="px-12 font-montserrat font-black text-black absolute inset-0 flex justify-center items-center">ERROR: CHECK SCREEN SIZE</p>
+</div>
+  
+<div *ngIf="!isScreenTooSmall" class="flex flex-row flex-wrap w-full mx-auto justify-start min-h-screen">
+    <!-- Name and Links Section Start -->
+    <div class="p-10 flex flex-col md:w-1/3 xs:w-full">
+        <!-- Photo, Name, CodeCog -->
+        <div class="scale-50 sm:-mb-12 -mb-14 -mt-20 overflow-hidden relative flex justify-start">
+            <img src="me_blue_crop1-1_contrast.jpg" alt="Wendy Tygrett" class="opacity-85 rounded-3xl object-cover w-full h-auto">
+        </div>
+        
+        <h1 class="font-mono text-4xl pb-4 text-center xs:pt-4 sm:pt-0">
+          Wendy <span class="font-bold text-tech-blue">Tygrett</span>
+        </h1>
+      
+        <app-code-cog 
+          [textToType]="textToDisplay" 
+          class="self-start pt-2 min-w-1/3 md:w-full sm:w-full xs:w-full">
+        </app-code-cog>
+      
+        <!-- Social Media, Resume, Contact -->
+        <div class="flex space-x-12 mx-auto font-montserrat font-black">
+          <!-- GitHub -->
+          <a href="https://github.com/wgtygrett" target="_blank" class="font-semibold relative group flex flex-col items-center">
+            <fa-icon [icon]="faGithub" class="text-3xl text-tech-blue-dark opacity-50"></fa-icon>
+            <span 
+              class="absolute top-0 opacity-0 group-hover:opacity-50 transform 
+              -translate-y-0 group-hover:translate-y-12 transition-all duration-800 
+              ease-in-out bg-tech-blue-bright text-white text-xs px-2 py-1 rounded shadow-md">
+              GITHUB
+            </span>
+          </a>
+      
+          <!-- LinkedIn -->
+          <a href="https://linkedin.com/in/wtygrett" target="_blank" class="font-semibold relative group flex flex-col items-center">
+            <fa-icon [icon]="faLinkedin" class="text-3xl text-tech-blue-dark opacity-50"></fa-icon>
+            <span 
+              class="absolute top-0 opacity-0 group-hover:opacity-50 transform 
+              -translate-y-0 group-hover:translate-y-12 transition-all duration-800 
+              ease-in-out bg-tech-blue-bright  text-white text-xs px-2 py-1 rounded shadow-md">
+              LINKEDIN
+            </span>
+          </a>
+      
+          <!-- Resume Download -->
+          <a href="" target="_blank" class="font-semibold relative group flex flex-col items-center">
+            <fa-icon (click)="downloadFile()" [icon]="faDownload" class="text-3xl text-tech-blue-dark opacity-50"></fa-icon>
+            <span 
+              class="absolute top-0 opacity-0 group-hover:opacity-50 transform 
+              -translate-y-0 group-hover:translate-y-12 transition-all duration-800 
+              ease-in-out bg-tech-blue-bright text-white text-xs px-2 py-1 rounded shadow-md">
+              RESUME
+            </span>
+          </a>
+
+          <!-- WIP:Contact Me -->
+          <!-- <a href="" target="_blank" class="font-semibold relative group flex flex-col items-center">
+            <fa-icon [icon]="faEnvelope" class="text-3xl text-tech-blue-dark opacity-50"></fa-icon>
+            <span 
+              class="absolute top-0 opacity-0 group-hover:opacity-50 transform 
+              -translate-y-0 group-hover:translate-y-12 transition-all duration-800 
+              ease-in-out bg-tech-blue-bright text-white text-xs px-2 py-1 rounded shadow-md">
+              CONTACT
+            </span> -->
+          </a>
+        </div>
+      </div>
+      
+    <!-- Name and Links Section End -->
+  
+    <!-- Education, Skills Section Start -->
+    <div class="flex-1 max-h-screen flex flex-col md:w-1/2 border-r-4">
+      <!-- Center the button container -->
+      <div class="flex flex-wrap justify-center items-center gap-4 py-5 w-full mx-auto">
+
+        <app-button 
+        class="opacity-50"
+        (click)="scrollTo('about-me')" 
+        (buttonClicked)="onButtonClick('ABOUT ME')" 
+        [variant]="isButtonActive('ABOUT ME') ? 'tech-blue-bright' : 'tech-blue-dark-transparent'">
+        ABOUT ME
+        </app-button>
+
+        <app-button 
+        class="opacity-50"
+        (click)="scrollTo('experience')" 
+        (buttonClicked)="onButtonClick('EXPERIENCE')" 
+        [variant]="isButtonActive('EXPERIENCE') ? 'tech-blue-bright' : 'tech-blue-dark-transparent'">
+        EXPERIENCE
+        </app-button>
+
+        <app-button 
+        class="opacity-50"
+        (click)="scrollTo('skills')" 
+        (buttonClicked)="onButtonClick('SKILLS')" 
+        [variant]="isButtonActive('SKILLS') ? 'tech-blue-bright' : 'tech-blue-dark-transparent'">
+        SKILLS
+        </app-button>
+
+        <app-button
+        class="opacity-50" 
+        (click)="scrollTo('education')" 
+        (buttonClicked)="onButtonClick('EDUCATION')" 
+        [variant]="isButtonActive('EDUCATION') ? 'tech-blue-bright' : 'tech-blue-dark-transparent'">
+        EDUCATION
+        </app-button>
+      </div>
+  
+      <!-- Updated container with fixed height and overflow behavior -->
+      <div class="h-full mx-4 mb-4 flex-1 overflow-y-auto">
+        <div class="overflow-auto">
+          
+          <section *ngIf="selectedSection === 'ABOUT ME'" class="mb-8 px-20">
+            <!-- <h2 class="text-2xl font-semibold"></h2> -->
+            <div class="xs:px-0 sm:px-0 md:px-0 lg:px-4 text-sm">
+                <p class="text-tech-blue-mid text-lg font-montserrat font-black"><br>Hi! I'm Wendy Tygrett.<br></p>
+                <p class="font-montserrat font-thin pt-3">I'm an experienced <span class="font-bold">software engineer with over 6 years</span> in Big Data technologies, data analytics, and full-stack development.
+                I have worked in the health insurance domain, optimizing data-driven solutions and building both client- and business-facing systems and web app tools.
+                <br>I also have <span class="font-bold">an additional 2 years</span> of experience not just as a SWE but also
+                <span class="font-bold">as an "Engineer Ambassador"</span> with my alma mater,
+                <a href="https://www.mcneese.edu" class="font-semibold underline text-tech-blue-mid hover:text-tech-blue">McNeese State University</a>, in which I taught computer science concepts
+                 to university seniors and elementary students alike.
+                </p>
+                <p class="font-montserrat font-thin pt-3">
+                I'm adept at analyzing and testing large, complex datasets as well as designing user-friendly 
+                and visually appealing web apps for business use.
+                Some of my recent technology experience includes 
+                <a href="https://databricks.com" class="font-semibold underline text-tech-blue-mid hover:text-tech-blue">Databricks</a>, <a href="https://www.terraform.io" class="font-semibold underline text-tech-blue-mid hover:text-tech-blue">Terraform</a> as infrastructure-as-code, 
+                <a href="https://aws.amazon.com" class="font-semibold underline text-tech-blue-mid hover:text-tech-blue">AWS services</a>, and <a href="https://angular.io" class="font-semibold underline text-tech-blue-mid hover:text-tech-blue">Angular</a> with <a href="https://tailwindcss.com" class="font-semibold underline text-tech-blue-mid hover:text-tech-blue">TailwindCSS</a> (like this site!).
+                </p>
+                <p class="font-montserrat font-thin pt-2">
+                My interests also lie in project management to bridge my technical expertise with client goals.
+                I've acted as a stand-in for scrum ceremonies, 
+                including <span class="font-bold">daily scrums, retrospectives, and planning sessions.</span>
+                <!-- <br> -->
+                I have experience with collaborating with stakeholders, 
+                <span class="font-bold">translating business needs into technical requirements,</span>
+                contributing to 
+                <span class="font-bold">architecture design, documentation, and prototyping</span> 
+                - submitting architecture diagrams and proof-of-concept (PoC) solutions for client approval.
+                </p>
+                <p class="font-montserrat font-thin pt-3">
+                As an <span class="font-bold">"Engineer Ambassador"</span> and student instructor, I worked on creating hands-on coding modules 
+                and teaching computer science concepts to university seniors and elementary students.<br>
+                I've also used <a href="https://csunplugged.org" class="font-semibold underline text-tech-blue-mid hover:text-tech-blue">CS Unplugged</a> and <a href="https://code.org" class="font-semibold underline text-tech-blue-mid hover:text-tech-blue">Code.org</a> as teaching tools, travelled to local elementary schools to teach, and 
+                <span class="font-bold">hosted 'coding camps'</span> at my university.
+                <br>
+                I co-designed and facilitated 
+                <span class="font-bold">an Android app workshop for high school girls</span> 
+                to teach them the importance of STEM as a career field, keeping it fun and educational.
+                <br>
+                Being able to introduce the younger generations to STEM has been a highlight of my career. 
+                It's one of my proudest professional accomplishments.
+                <br>My ultimate goal is to create a positive impact on those I interact with.
+                </p>
+                <p class="font-montserrat font-thin pt-3">
+                Outside of my professional enterprises, I enjoy downtime with 
+                <a href="https://instagram.com/little.tiger.art" 
+                target="_blank" rel="noopener noreferrer"
+                class="font-semibold underline text-tech-blue-mid hover:text-tech-blue">watercolor painting</a>, 
+                <a href="https://www.facebook.com/la.lumiere.co" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="font-semibold underline text-tech-blue-mid hover:text-tech-blue">making candles</a>, and 
+                <button (click)="openDialog()" class="font-semibold underline text-tech-blue-mid hover:text-tech-blue">spending time with my cats.</button>
+                <app-dialog [id]="dialogID">
+                <div class="p-4 bg-blue-10">
+                    <h3 class="font-heading text-2xl leading-6 font-medium text-black">
+                    <!-- <fa-icon class="text-blue mr-4" [icon]="infoIcon"></fa-icon>Dialog Title -->
+                    </h3>
+                </div>
+                <div class="p-4">
+                    <app-image-slider [images]="images" class="mt-20"></app-image-slider>
+                </div>
+                <div class="px-4 py-3 sm:px-6 sm:flex sm:justify-end bg-gray-1">
+                    <app-button variant="tech-blue-dark-transparent" class="ml-4" (click)="closeDialog()">Thanks! I'm done.</app-button>
+                </div>
+                </app-dialog>
+                </p>
+                
+            </div>
+                
+          </section>
+
+          <!-- EXPERIENCE -->
+          <section *ngIf="selectedSection === 'EXPERIENCE'" class="mb-10 sm:px-12 xl:px-24">
+            <div class="mb-6 font-montserrat">
+                <br>
+              <h3 class="font-black pb-4 text-tech-blue-mid text-md">Software Engineer | CGI Technologies Inc. <br> Commercial Pharmacy Client | June 2023 – Current</h3>
+              <ul class="list-disc pl-6 text-sm font-thin">
+                <li class="mb-2">Optimized SQL queries to drastically enhance performance, reducing processing times from minutes to milliseconds</li>
+                <li class="mb-2">Led the transition from Hadoop to Databricks by analyzing existing data structures, identifying potential challenges, and ensuring a smooth transition.</li>
+                <li class="mb-2">Expanded project schemas to meet new granularity requirements.</li>
+                <li class="mb-2">Acted as subject-matter expert on team’s largest projects for pharmacy benefits, while maintaining multiple datasets as client needs changed.</li>
+                <li class="mb-2">Utilized internal documentation to accurately map data fields to ensure consistency across projects.</li>
+                <li class="mb-2">Developed and maintained crosswalk data tables to align team projects with the data needs of downstream users.</li>
+                <li class="mb-2">Defined workflow needs for data solutions, utilizing Terraform and Databricks to define and schedule jobs to ensure data delivery to downstream users.</li>
+                <li class="mb-2">Functioned as a liaison between business users and developers, translating business requirements into actionable solutions.</li>
+                <li class="mb-2">Identified and addressed data gaps, inconsistencies, and accessibility issues while directing towards potential solutions.</li>
+                <li class="mb-2">Ensured proper documentation of processes was maintained, and mentored new team members with knowledge transfers on best practices.</li>
+              </ul>
+            </div>
+  
+            <div class="mb-6 font-montserrat">
+              <h3 class="font-black pb-4 text-tech-blue-mid">Software Engineer | CGI Technologies Inc. <br>  Medicare + Medicaid Pharmacy Client | March 2022 – June 2023</h3>
+              <ul class="list-disc pl-6 text-sm font-thin">
+                <li class="mb-2">Automated case management data extraction for Medicare Advantage Prescription Drug members, streamlining medication review uploads to case management tools.</li>
+                <li class="mb-2">Used Teradata to map, transform, and standardize client data to meet vendor requirements.</li>
+                <li class="mb-2">Designed and implemented new data objects by updating the data definition language (DDL) and data manipulation language (DML) using SQL and Teradata.</li>
+                <li class="mb-2">Collaborated with Extract, Transform, Load (ETL) teams to validate and ensure data accuracy.</li>
+                <li class="mb-2">Leveraged ActiveBatch job scheduler to extract and securely transfer members’ data.</li>
+                <li class="mb-2">Developed Python s/cripts to extract and modify large files to achieve smaller, workable files for business use.</li>
+                <li class="mb-2">Implemented automation framework for Medicare Part D drug prior authorization auto-approval process.</li>
+                <li class="mb-2">Translated business specifications into optimized Teradata queries.</li>
+                <li class="mb-2">Conducted data mapping and validation of client data, ensuring seamless integration of client data into new data objects.</li>
+                <li class="mb-2">Utilized models of existing infrastructure on Cigna’s commercial pharmacy side to carry forward to Cigna’s government pharmacy side, requiring an understanding of both sector-specific data frameworks and compliance needs.</li>
+              </ul>
+            </div>
+            
+            <div class="mb-6 font-montserrat">
+              <h3 class="font-black pb-4 text-tech-blue-mid">Software Engineer | CGI Technologies Inc. <br> Commercial Pharmacy Client | June 2019 – March 2022</h3>
+              <ul class="list-disc pl-6 text-sm font-thin">
+                <li class="mb-2">Designed and built intuitive front-end tools and wireframes following Cigna’s branding guidelines.</li>
+                <li class="mb-2">Integrated Amazon Web Services (AWS), including S3 buckets for file uploads and Simple Notification Service (SNS) for issue reporting.</li>
+                <li class="mb-2">Spearheaded performance optimizations for Hadoop queries, significantly improving query times and application efficiency.</li>
+                <li class="mb-2">Made creative UI/UX design decisions while ensuring adherence to Cigna’s style standards for a sleek and poliId user experience.</li>
+                <li class="mb-2">Used Angular 11 with Tailwind CSS to develop responsive front-ends for web-apps, including: a web-app to determine patient approval status for a specific drug class, a web-app to assist pharmacists in coaching patients on medication adherence, and a tool for internal users to locate business reference documents.</li>
+                <li class="mb-2">Conducted performance, volume, and stress (PVS) testing to assess application behavior under increased data loads.</li>
+                <li class="mb-2">Automated processes using Python scripts which executed Bash scripts to launch OpenShift jobs.</li>
+                <li class="mb-2">Utilized Quay and Docker to containerize and spin up instances of web-apps.</li>
+                <li class="mb-2">Supported front-end releases, utilizing Dynatrace for front-end logging and compliance requirements.</li>
+                <li class="mb-2">Modified existing Hive queries to update data across Tableau dashboards with real-time data.</li>
+                <li class="mb-2">Conducted bi-weekly extraction validation reports to ensure accurate data transmission from vendors to Cigna.</li>
+              </ul>
+            </div>
+            
+            <div class="mb-6 font-montserrat">
+              <h3 class="font-black pb-4 text-tech-blue-mid">Student Instructor | McNeese State University <br> College of Engineering | May 2017 – June 2019</h3>
+              <ul class="list-disc pl-6 text-sm font-thin">
+                <li class="mb-2">Designed and facilitated an app development workshop for high school students, covering fundamental computer science and Android development concepts, including app design (Android, Maven, Gradle, Kotlin, Java, XML basics), UI/UX principles, and front-end development focused on creating user-friendly interfaces.</li>
+                <li class="mb-2">Served as a student instructor for university courses in object-oriented programming (Java, C#), data structures and algorithms, database design, software engineering (Java, C, TDD/BDD, SDLC, PoC, MVC), game development (C#, Unity3D, augmented reality), Android application development (Maven, Kotlin, Gradle, Java, XML), and web design principles (HTML, CSS, Angular).</li>
+                <li class="mb-2">Assisted professors in developing coding assignments, quizzes, and mentoring materials for multiple courses.</li>
+                <li class="mb-2">Graded exams, quizzes, and papers while coordinating with administrative staff in the College of Engineering.</li>
+                <li class="mb-2">Acted as a liaison between students and faculty to facilitate communication and academic support.</li>
+              </ul>
+            </div>
+          </section>
+          
+          <!-- SKILLS -->
+          <section *ngIf="selectedSection === 'SKILLS'" class="mb-10 px-40 pt-14">
+            <h2 class="text-2xl font-semibold"></h2>
+            <div class="grid grid-cols xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-6">
+              <div *ngFor="let skill of skills" class="skill-container group relative p-4 rounded-lg
+               bg-tech-blue-bright opacity-50 text-white flex items-center justify-center h-full w-full">
+                <p class="text-xs text-center">
+                <h3 class="font-semibold text-center font-mono text-sm">{{ skill.name }}</h3>
+                <!-- Subtitle directly underneath the skill name, with minimal space -->
+                <p class="text-xs font-syncopate font-normal text-center">
+                    <ng-container *ngIf="skill.name === 'Front-End Development'"
+                    >
+                        <p class='mb-4 '>{{ skill.subtitle }}</p>
+                    </ng-container>
+
+                    <ng-container *ngIf="skill.name === 'DevOps & CI/CD Tools' ||
+                    skill.name === 'Data Analytics & Engineering' || skill.name === 'Automation Tools'"
+                    >
+                        <p class=''>{{ skill.subtitle }}</p>
+                    </ng-container>
+
+                    <ng-container *ngIf="skill.name === 'Back-End Development' ||
+                    skill.name === 'Cloud & Big Data Technologies' || 
+                    skill.name === 'Soft Skills & Collaboration' || 
+                    skill.name === 'Healthcare & Insurance Systems'"
+                    >
+                        <p class='mt-2'>{{ skill.subtitle }}</p>
+                    </ng-container>
+                
+                
+                
+                </p>
+                <!-- Skill description that expands on hover -->
+                <div class="font-syncopate font-normal description absolute inset-0 
+                bg-tech-blue-dark opacity-0 group-hover:opacity-100 transition-opacity p-4 rounded-lg flex items-center justify-center">
+                  <p class="text-xs text-center">{{ skill.description }}</p>
+                </div>
+              </div>
+            </div>
+        
+  
+  
+  
+  
+  
+              
+              
+            <!-- TECHNICAL & SOFT SKILLS -->
+    <!-- <div class="mb-6">
+      <br>
+      <h3 class="font-semibold pb-4 text-tech-blue-mid text-sm">Technical & Soft Skills</h3>
+        <ul class="list-disc pl-6 text-xs">
+            <li class="mb-2">SQL</li>
+            <li class="mb-2">Databricks</li>
+            <li class="mb-2">Angular, Node.js, NPM</li>
+            <li class="mb-2">HTML, CSS, TypeScript</li>
+            <li class="mb-2">CSS Frameworks (e.g., Tailwind CSS)</li>
+            <li class="mb-2">Apache Hadoop & Hive</li>
+            <li class="mb-2">Job Scheduling & Automated Workflow Tools (CA Workload Automation, ActiveBatch)</li>
+            <li class="mb-2">AWS Services (S3, SNS, EC2, Amplify)</li>
+            <li class="mb-2">Kafka</li>
+            <li class="mb-2">UI/UX Design</li>
+            <li class="mb-2">Jenkins</li>
+            <li class="mb-2">Docker</li>
+            <li class="mb-2">Dynatrace</li>
+            <li class="mb-2">Teradata, Teradata Vantage</li>
+            <li class="mb-2">Git, GitHub, GitLab (Version Control)</li>
+            <li class="mb-2">Orchestrator, Cloudbees</li>
+            <li class="mb-2">RedHat OpenShift</li>
+            <li class="mb-2">Jira, Confluence</li>
+            <li class="mb-2">Terraform, Infrastructure-as-Code</li>
+            
+            <li class="mb-2">Data Analytics & Engineering</li>
+            <li class="mb-2">Front-End Development</li>
+            <li class="mb-2">Full-Stack Development</li>
+            <li class="mb-2">Data Modeling & Integration</li>
+            <li class="mb-2">DevOps + CI/CD (SDLC, MVC, Jenkins, Terraform, Docker)</li>
+            
+            <li class="mb-2">Health Insurance & Payer Systems (Medicare, Medicaid, Commercial)</li>
+            <li class="mb-2">Understanding of Prior Authorizations, Drug Formularies</li>
+            
+            <li class="mb-2">Agile Methodologies</li>
+            <li class="mb-2">Project Management</li>
+            <li class="mb-2">Problem-Solving & Analytical Thinking</li>
+            <li class="mb-2">Cross-Functional Collaboration</li>
+            <li class="mb-2">Mentorship & Coaching</li>
+            <li class="mb-2">Effective Communication</li>
+        </ul>
+        </div> -->
+    
+          </section>
+          
+          <!-- EDUCATION -->
+          <section *ngIf="selectedSection === 'EDUCATION'" class="mb-10 px-40 pt-12">
+            <app-vertical-timeline></app-vertical-timeline>
+            <!-- <div class="mb-6">
+            <br>
+              <h3 class="font-semibold pb-1 text-tech-blue-mid text-sm">
+                McNeese State University, 2015 - 2019</h3>
+                <p class="text-xs">Bachelor of Science in Computer Science</p>
+                <br>
+                <h3 class="font-semibold pb-1 text-tech-blue-mid text-sm">
+                  Academy of Acadiana, 2013</h3>
+                  <p class="text-xs">Certification, EKG Technician</p>
+                  <br>
+                  <h3 class="font-semibold pb-1 text-tech-blue-mid text-sm">
+                    Delta School of Arts and Technology</h3>
+                    <p class="text-xs">Certification, Phlebotomy Technician</p>
+            </div> -->
+          </section>
+        </div>
+      </div>
+    </div>
+    <!-- Education, Skills Section End -->
+  
+</div>

@@ -1,0 +1,25 @@
+<div class="relative w-full max-w-lg mx-auto">
+    <div class="overflow-hidden">
+      <div class="flex transition-transform duration-300" [ngStyle]="{'transform': 'translateX(' + slideIndex * -100 + '%)'}">
+        <div *ngFor="let image of images" class="flex-shrink-0 w-full flex flex-col items-center relative">
+          <div class="w-3/4">
+            <img [src]="image.src" alt="Image Slider" class="w-full h-auto object-cover rounded-lg">
+            <div class="text-tech-blue-gray text-center p-4">
+              {{ image.description }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Left Button -->
+    <button (click)="moveSlide('left')" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-tech-blue opacity-50 text-white p-2 rounded-full shadow-lg">
+      &#10094;
+    </button>
+  
+    <!-- Right Button -->
+    <button (click)="moveSlide('right')" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-tech-blue opacity-50 text-white p-2 rounded-full shadow-lg">
+      &#10095;
+    </button>
+  </div>
+  

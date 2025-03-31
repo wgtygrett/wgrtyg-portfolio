@@ -1,0 +1,17 @@
+<div class="flex items-center mt-2">
+    <input
+      [id]="inputId"
+      type="radio"
+      class="focus:ring-blue-light h-4 w-4 text-blue border-gray-15"
+      [value]="value"
+      [(ngModel)]="input"
+      (ngModelChange)="onChange($event)"
+      (blur)="onTouch($event)"
+    />
+    <div class="ml-3 block">
+      <app-label [for]="inputId">
+        {{ label }}
+      </app-label>
+    </div>
+</div>
+  

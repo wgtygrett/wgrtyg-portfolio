@@ -1,0 +1,17 @@
+<div class="flex items-center mt-2">
+    <div class="flex items-center h-5">
+      <input
+        [id]="inputId"
+        type="checkbox"
+        [(ngModel)]="value"
+        [checked]="value"
+        (ngModelChange)="onChange($event)"
+        (blur)="onTouch($event)"
+        class="focus:ring-blue-light h-4 w-4 text-blue border-gray-40 rounded"
+      />
+    </div>
+    <div class="ml-3">
+      <app-label [for]="inputId">{{ label }}</app-label>
+    </div>
+  </div>
+  

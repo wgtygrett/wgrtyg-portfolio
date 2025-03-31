@@ -1,0 +1,10 @@
+<app-label [for]="inputId" class="block">{{ label }}</app-label>
+<select
+  [id]="inputId"
+  [(ngModel)]="selected"
+  (ngModelChange)="onChange($event)"
+  (blur)="onTouch($event)"
+  class="mt-1 block w-full py-2 px-3 border border-gray-15 bg-white rounded-md shadow-4 focus:outline-none focus:ring-blue-light focus:border-blue-light sm:text-sm"
+>
+  <option *ngFor="let option of options" [ngValue]="option">{{ option }}</option>
+</select>

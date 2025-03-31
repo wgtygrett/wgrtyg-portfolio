@@ -1,0 +1,61 @@
+<!-- Sticky Header -->
+<div class="flex sm:w-full h-[80px] shadow-md bg-white justify-center items-center fixed top-0 left-0 w-full z-50">
+    <!-- Home Link / WebApp Title -->
+    <div class="flex justify-center items-center w-full space-x-4">
+      <div class="text-xl font-medium text-[#0170BC] flex space-x-4">
+        
+        <!-- Resume Button -->
+        <app-button 
+          (click)="scrollTo('resume')"  
+          (tabClicked)="onButtonClick('RESUME')" 
+          label="Resume" 
+          class="w-auto"
+          variant="tech-blue">
+          <i class="fas fa-download"></i> RESUME
+        </app-button>
+  
+        <!-- Experience Button -->
+        <app-button 
+          (click)="scrollTo('experience')" 
+          (tabClicked)="onButtonClick('EXPERIENCE')" 
+          label="Experience" 
+          class="w-auto"
+          variant="tech-blue">
+          EXPERIENCE
+        </app-button>
+  
+        <!-- Skills Button -->
+        <app-button 
+          (click)="scrollTo('skills')" 
+          (tabClicked)="onButtonClick('SKILLS')" 
+          label="Skills" 
+          class="w-auto"
+          variant="tech-blue">
+          SKILLS
+        </app-button>
+  
+        <!-- Education Button -->
+        <app-button 
+          (click)="scrollTo('education')" 
+          (tabClicked)="onButtonClick('EDUCATION')" 
+          label="Education" 
+          class="w-auto"
+          variant="tech-blue">
+          EDUCATION
+        </app-button>
+  
+      </div>
+    </div>
+  </div>
+  
+  <!-- Padding to prevent content overlap with the sticky header -->
+  <div class="pt-[80px]">
+    <!-- WIP: Side Nav Menu Button -->
+    <!-- <div class="absolute top-1/2 right-6 -translate-y-1/2">
+      <app-button (click)="toggleSideNav()" variant="secondary">
+        <fa-icon class="link-icon" [icon]="menuIcon" transform="shrink-2 down-1"></fa-icon>
+        <span class="ml-2 text-sm">Menu</span>
+      </app-button>
+    </div> -->
+  </div>
+  

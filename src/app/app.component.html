@@ -1,0 +1,25 @@
+<div class="wrapper min-h-screen">
+  <!-- <app-header (tabClicked)="updateTextToDisplay($event)"></app-header> -->
+  
+  <!-- <app-side-nav
+  [sidenavTemplateRef]="navContent"
+  [direction]="'right'"
+  [navWidth]="280"
+  [duration]=".5"></app-side-nav> -->
+  <main class="">
+    <router-outlet></router-outlet>
+  </main>
+  <!-- <app-footer></app-footer> -->
+</div>
+
+<ng-template #navContent>
+  <div class="mb-4 pb-2">
+  <a aria-label="home" href="" class="route-link">
+    <div class="pb-4 border-b-2 hover: hover:border-blue-dark">
+    <!-- <fa-icon class="mr-4" [icon]="homeIcon" transform=""></fa-icon> -->
+    Home
+  </div>
+  </a>
+  </div>
+
+</ng-template>

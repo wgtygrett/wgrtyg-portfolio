@@ -1,0 +1,16 @@
+.animated-div {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    line-height: 1.5; /* Adjust line height to ensure proper spacing */
+  }
+  
+  h1 {
+    display: flex;
+    align-items: center; /* Ensures the text is vertically aligned */
+    justify-content: center;
+    margin: 0;
+    padding: 10px; /* Add padding if necessary to prevent clipping */
+  }
+  

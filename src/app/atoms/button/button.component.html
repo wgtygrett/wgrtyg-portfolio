@@ -1,0 +1,8 @@
+<button 
+  class="btn font-mono" 
+  [disabled]="disabled" 
+  [ngClass]="getVariant()"
+  [ngStyle]="{ 'border-radius': borderRadius }"
+  (click)="onClick()"> <!-- Ensure click event is captured here -->
+  <ng-content></ng-content>
+</button>

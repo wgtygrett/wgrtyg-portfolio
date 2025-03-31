@@ -1,0 +1,134 @@
+html, body {
+    scroll-behavior: smooth;
+  }
+  
+  @keyframes fadeInAndGrow {
+    0% {
+      transform: scale(0.25); /* Start smaller */
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1); /* End at 100% size */
+      opacity: 1; /* Full opacity */
+    }
+  }
+  
+  .fade-in-grow {
+    display: inline-block;
+    animation: fadeInAndGrow 3s ease-out forwards;
+  }
+  
+  /* Initial state of the text (off to the right) */
+  .slide-in {
+    transform: translateX(100%); /* Start off-screen to the right */
+    opacity: 0; /* Initially invisible */
+    transition: transform 2s ease-out, opacity 2s ease-out; /* Smooth transition for position and opacity */
+  }
+  
+  /* Final state of the text (fully visible in place) */
+  .slide-in.loaded {
+    transform: translateX(0); /* Move text to its natural position */
+    opacity: 1; /* Fully visible */
+  }
+  
+  /* Grid container */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 15px;
+    margin: 20px;
+  }
+  
+  /* Skill box container */
+  .skill-box {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s;
+    display: flex;
+    flex-direction: column; /* Allow for flexible content inside */
+    justify-content: space-between;
+  }
+  
+  .skill-box:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    background-color: #007bff; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+  }
+  
+  /* Skill name styling */
+  .skill-name {
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .skill-box:hover .skill-name {
+    color: white; /* Change the name color on hover */
+  }
+  
+  /* Description that appears on hover */
+  .skill-description {
+    display: none; /* Initially hidden */
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+    max-height: 0; /* Hide the description initially */
+    overflow: hidden; /* Ensure the content doesn’t overflow */
+    transition: max-height 0.3s ease-in-out; /* Smooth transition */
+  }
+  
+  .skill-box:hover .skill-description {
+    display: block; /* Show description when hovered */
+    max-height: 500px; /* Allow space for the description (adjust as needed) */
+    overflow: visible; /* Make sure it's fully visible */
+  }
+  
+  /* Ensure skill boxes can expand to accommodate description */
+  .skill-container {
+    position: relative;
+    overflow: hidden;  /* Prevent overflow when description expands */
+    transition: all 0.3s ease-in-out;  /* Smooth resizing */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* Style the description */
+  .description {
+    opacity: 0;
+    transform: scale(0.95); /* Slight scale effect for smooth appearance */
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: absolute; /* Positioned within the skill box */
+    inset: 0; /* Stretch across entire skill box */
+    padding: 10px;
+    flex-grow: 1; /* Allow the description to grow */
+    transition: max-height 0.3s ease-in-out; /* Smooth max-height transition */
+  }
+  
+  /* Show description box and adjust the container on hover */
+  .skill-container:hover .description {
+    opacity: 1;
+    transform: scale(1);  /* Return to normal size */
+  }
+  
+  /* On hover, expand the skill container to make room for the description */
+  .skill-container:hover {
+    transform: scale(1.05);  /* Slightly scale up the skill container */
+    z-index: 10;  /* Bring the hovered container on top */
+  }
+  
+  /* Responsive behavior */
+  @media (max-width: 640px) {
+    .skills-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  

@@ -1,0 +1,41 @@
+app-dialog {
+    display: none;
+  }
+  
+  app-dialog .dialog {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  app-dialog .dialog .dialog-body {
+    border-radius: 0.5rem;
+    max-width: 48rem; /* max-w-3xl */
+    margin: auto;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-4 */
+    overflow: hidden;
+  }
+  
+  app-dialog .dialog-background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.75; /* opacity-1 */
+    z-index: 900;
+  }
+  
+  body.dialog-open {
+    overflow: hidden;
+  }
+  
