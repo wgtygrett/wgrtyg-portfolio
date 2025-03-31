@@ -10,7 +10,7 @@ const routes: Routes = [
   // { path: '', component: HomeComponent, pathMatch: 'full' },
   // { path: '', component: TemplateComponent, pathMatch: 'full' }, // NOTE: Setting this as the home for now until i think of something cool. cat pics?
   // { path: 'template', component: TemplateComponent, pathMatch: 'full' },
-  { path: 'aboutme', component: AboutMeComponent, pathMatch: 'full' },
+  // { path: 'aboutme', component: AboutMeComponent, pathMatch: 'full' },
   { path: '', component: BlankComponent, pathMatch: 'full' },
 
   { path: '**', component: NotFoundComponent },
