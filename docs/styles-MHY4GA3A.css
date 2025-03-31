@@ -9,28 +9,28 @@
 
 @font-face {
     font-family: 'Major Mono Display';
-    src: url('./app/assets/fonts/Major_Mono_Display/MajorMonoDisplay-Regular.ttf') format('truetype');
+    src: url('./wgrtyg-portfolio/browser/media/MajorMonoDisplay-Regular-V2JOSJ4R.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
   }
   
   .monodisplay-regular {
     font-family: 'Major Mono Display';
-    src: url('./app/assets/fonts/Major_Mono_Display/MajorMonoDisplay-Regular.ttf') format('truetype');
+    src: url('./wgrtyg-portfolio/browser/media/MajorMonoDisplay-Regular-V2JOSJ4R.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
   }
   
   .syncopate-regular {
     font-family: "Syncopate", sans-serif;
-    src: url('./app/assets/fonts/Syncopate/Syncopate-Regular.ttf') format('truetype');
+    src: url('./wgrtyg-portfolio/browser/media/Syncopate/Syncopate-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
   }
   
   .syncopate-bold {
     font-family: "Syncopate", sans-serif;
-    src: url('./app/assets/fonts/Syncopate/Syncopate-Bold.ttf') format('truetype');
+    src: url('./wgrtyg-portfolio/browser/media/Syncopate/Syncopate-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
   }
