@@ -35,9 +35,10 @@ export class BlankComponent implements OnInit {
   dialogID: string = 'cats'
 
   images = [
-    { src: 'me_blue_crop1-1_contrast.jpg', description: 'Description for Image 1' },
-    { src: 'me_blue_crop1-1_contrast.jpg', description: 'Description for Image 2' },
-    { src: 'me_blue_crop1-1_contrast.jpg', description: 'Description for Image 3' }
+    { src: 'Teddy.jpg', description: 'Teddy, age 15, enjoying his soft pink blanket.' },
+    { src: 'BB.jpg', description: 'BB, age 5, enjoying ruining Teddy\'s photoshoot.' },
+    { src: 'Marvin.jpg', description: 'Marvin, age 2, enjoying the simple things.' },
+
   ];
 
   
