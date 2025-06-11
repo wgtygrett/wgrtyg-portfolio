@@ -138,7 +138,7 @@ export class BlankComponent implements OnInit {
     }
   
     downloadFile() {
-      const fileUrl = 'https://drive.google.com/file/d/1239p8fbSR9H8GQY9uHsInK-pBjh9CKG3/view';
+      const fileUrl = 'https://drive.google.com/file/d/1QU7ZBJTfsVcSI6Lzf9gwLyZoC5N18owW/view';
       window.open(fileUrl, '_blank');
     }
     
